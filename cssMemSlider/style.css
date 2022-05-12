@@ -1,6 +1,25 @@
 :root {
   --main-color: #155729;
   --second-color: #daa49b;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  :root {
+    font-size: 7px;
+  }
 }
 
 * {
@@ -10,7 +29,7 @@
 }
 
 body {
-  background-color: #885a53;
+  background-color: #daa49b;
 }
 
 .slider {
@@ -26,7 +45,13 @@ body {
   background-color: var(--main-color);
   border: 0.5rem solid var(--main-color);
   border-radius: 0.5rem;
-  box-shadow: 0.2rem 0 1rem 0.5rem rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 1rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 576px) {
+  .slider {
+    grid-template-rows: 1% 85% 5% 9%;
+  }
 }
 
 .slides-wrapper {
@@ -56,13 +81,30 @@ body {
   padding: 0 2rem;
   transition: all 0.5s ease-out;
 }
+
+@media (max-width: 576px) {
+  .text {
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+    margin-top: 1rem;
+    padding: 0;
+    justify-content: center;
+  }
+}
+
 p {
   display: inline-block;
   min-width: 20rem;
-  transform: translateX(0);
   font-family: "Fira Sans Condensed", sans-serif;
   padding-right: 2rem;
-  color: #ffffff;
+  color: var(--main-color);
+}
+@media (max-width: 576px) {
+  p {
+    text-align: center;
+    font-size: 1.1rem;
+    padding-right: 3rem;
+  }
 }
 
 .navigation {
@@ -73,6 +115,15 @@ p {
   padding: 0 2rem;
   z-index: 3;
   background-color: var(--main-color);
+}
+
+@media (max-width: 576px) {
+  .navigation {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    margin-top: 0.8rem;
+    justify-content: center;
+  }
 }
 
 input {
@@ -143,12 +194,26 @@ label:hover {
   transform: translateX(0%);
 }
 
+#r1:checked ~ .text > p:nth-of-type(1) {
+  color: #ffffff;
+}
+
 #r2:checked ~ .text {
   transform: translateX(-24%);
 }
+#r2:checked ~ .text > p:nth-of-type(2) {
+  color: #ffffff;
+}
+
 #r3:checked ~ .text {
   transform: translateX(-48%);
 }
+#r3:checked ~ .text > p:nth-of-type(3) {
+  color: #ffffff;
+}
 #r4:checked ~ .text {
   transform: translateX(-72%);
+}
+#r4:checked ~ .text > p:nth-of-type(4) {
+  color: #ffffff;
 }
