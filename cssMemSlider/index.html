@@ -4,9 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <title>MemSlider</title>
 </head>
 <body>
-  
+  <div class="slider">
+      <input type="radio" name="mem" id="r1" checked>
+      <input type="radio" name="mem" id="r2">
+      <input type="radio" name="mem" id="r3">
+      <input type="radio" name="mem" id="r4">
+
+    <div class="slides-wrapper">
+      <img class="slide s2" src="./assets/kofta.jpg" alt="kofta">
+      <img class="slide s3" src="./assets/magazin.jpg" alt="magazin">
+      <img class="slide s4" src="./assets/ofis.jpg" alt="ofis">
+      <img class="slide s1" src="./assets/hurma.jpg" alt="hurma">
+    </div>
+
+    <div class="text">
+      <p>В магазине модной одежды</p>
+      <p>...чтобы мы по дороге домой зашли в&nbspмагазин.</p>
+      <p>...но ждать 8 часов, чтобы поехать обратно, реально утомляет!</p>
+      <p>Без комментариев...</p>
+    </div>
+
+    <div class="navigation">
+      <label for="r1" class="control"></label>
+      <label for="r2" class="control"></label>
+      <label for="r3" class="control"></label>
+      <label for="r4" class="control"></label>
+    </div>
+  </div>
+
 </body>
 </html>
