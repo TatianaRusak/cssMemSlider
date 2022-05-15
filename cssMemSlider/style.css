@@ -96,8 +96,8 @@ p {
 @media (max-width: 480px) {
   p {
     text-align: center;
-    font-size: 0.6rem;
-    line-height: 0.7rem;
+    font-size: 0.7rem;
+    line-height: 0.65rem;
   }
 }
 
